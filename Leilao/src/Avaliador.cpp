@@ -13,16 +13,6 @@ void Avaliador::avalia(Leilao leilao)
             menorValor = lance.recuperaValor();
         }
     }
-    
-    std::sort(lances.begin(), lances.end(), ordenaLances);
-    
-    size_t tamanho = lances.size() > 3 ? 3 : lances.size();
-    maiores3Lances = std::vector<Lance>(lances.begin(), lances.begin() + tamanho);
-}
-
-int Avaliador::ordenaLances(const Lance& lance1, const Lance& lance2)
-{
-    return lance1.recuperaValor() - lance2.recuperaValor();
 }
 
 float Avaliador::recuperaMaiorValor() const
@@ -33,9 +23,4 @@ float Avaliador::recuperaMaiorValor() const
 float Avaliador::recuperaMenorValor() const
 {
     return menorValor;
-}
-
-std::vector<Lance> Avaliador::recupera3MaioresLances() const
-{
-    return maiores3Lances;
 }
