@@ -30,7 +30,7 @@ TEST_CASE("Avaliador") {
     
     SECTION("Leilões ordenados") {
         Leilao leilao = GENERATE(emOrdemCrescente(), emOrdemDecrescente());
-        
+
         SECTION("Deve recuperar maior lance de leilão") {
             // Act - When
             leiloeiro.avalia(leilao);
