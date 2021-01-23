@@ -69,3 +69,29 @@ TEST_CASE("Deve recuperar menor lance de leilão em ordem crescente") {
     // Assert - Then
     REQUIRE(1000 == leiloeiro.recuperaMenorValor());
 }
+
+TEST_CASE("Deve recuperar os 3 maiores lances") {
+    // Arrange - Given
+    Lance primeiroLance(Usuario("Vinicius Dias"), 1000);
+    Lance segundoLance(Usuario("Ana Maria"), 2000);
+    Lance terceiroLance(Usuario("Pedro Paulo"), 1500);
+    Lance quartoLance(Usuario("Patricia Roberta"), 2500);
+    
+    Leilao leilao("Fiat 147 0Km");
+    leilao.recebeLance(primeiroLance);
+    leilao.recebeLance(segundoLance);
+    leilao.recebeLance(terceiroLance);
+    leilao.recebeLance(quartoLance);
+
+    Avaliador leiloeiro;
+
+    // Act - When
+    leiloeiro.avalia(leilao);
+
+    // Assert - Then
+    auto maiores3Lances = leiloeiro.recupera3MaioresLances();
+    REQUIRE(3 == maiores3Lances.size());
+    REQUIRE(2500 == maiores3Lances[0].recuperaValor());
+    REQUIRE(2000 == maiores3Lances[1].recuperaValor());
+    REQUIRE(1500 == maiores3Lances[2].recuperaValor());
+}
