@@ -8,10 +8,19 @@ void Avaliador::avalia(Leilao leilao)
         if (lance.recuperaValor() > maiorValor) {
             maiorValor = lance.recuperaValor();
         }
+
+        if (lance.recuperaValor() < menorValor) {
+            menorValor = lance.recuperaValor();
+        }
     }
 }
 
 float Avaliador::recuperaMaiorValor() const
 {
     return maiorValor;
+}
+
+float Avaliador::recuperaMenorValor() const
+{
+    return menorValor;
 }
