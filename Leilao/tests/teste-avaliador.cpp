@@ -1,4 +1,3 @@
-#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "Avaliador.hpp"
 
@@ -26,25 +25,25 @@ Leilao emOrdemDecrescente()
 
 TEST_CASE("Avaliador") {
     // Arrange - Given
-    Avaliador leiloeiro;
+    Avaliador avaliador;
     
     SECTION("Leilões ordenados") {
         Leilao leilao = GENERATE(emOrdemCrescente(), emOrdemDecrescente());
 
         SECTION("Deve recuperar maior lance de leilão") {
             // Act - When
-            leiloeiro.avalia(leilao);
+            avaliador.avalia(leilao);
 
             // Assert - Then
-            REQUIRE(2000 == leiloeiro.recuperaMaiorValor());
+            REQUIRE(2000 == avaliador.recuperaMaiorValor());
         }
 
         SECTION("Deve recuperar menor lance de leilão") {
             // Act - When
-            leiloeiro.avalia(leilao);
+            avaliador.avalia(leilao);
 
             // Assert - Then
-            REQUIRE(1000 == leiloeiro.recuperaMenorValor());
+            REQUIRE(1000 == avaliador.recuperaMenorValor());
         }
     }
 
@@ -62,38 +61,13 @@ TEST_CASE("Avaliador") {
         leilao.recebeLance(quartoLance);
 
         // Act - When
-        leiloeiro.avalia(leilao);
+        avaliador.avalia(leilao);
 
         // Assert - Then
-        auto maiores3Lances = leiloeiro.recupera3MaioresLances();
+        auto maiores3Lances = avaliador.recupera3MaioresLances();
         REQUIRE(3 == maiores3Lances.size());
         REQUIRE(2500 == maiores3Lances[0].recuperaValor());
         REQUIRE(2000 == maiores3Lances[1].recuperaValor());
         REQUIRE(1500 == maiores3Lances[2].recuperaValor());
     }
-}
-
-TEST_CASE("Leilão não deve receber lances consecutivos do mesmo usuário") {
-    // Arrange
-    Leilao leilao("Fiat 147 0Km");
-    Usuario vinicius("Vinicius Dias");
-    
-    Lance primeiroLance(vinicius, 1000);
-    Lance segundoLance(vinicius, 1500);
-    
-    // Act
-    leilao.recebeLance(primeiroLance);
-    leilao.recebeLance(segundoLance);
-    
-    // Assert
-    REQUIRE(1 == leilao.recuperaLances().size());
-    REQUIRE(1000 == leilao.recuperaLances()[0].recuperaValor());
-}
-
-TEST_CASE("Usuário deve saber informar seu primeiro nome") {
-    Usuario vinicius("Vinicius Dias");
-
-    std::string primeiroNome = vinicius.recuperaPrimeiroNome();
-
-    REQUIRE("Vinicius" == primeiroNome);
 }

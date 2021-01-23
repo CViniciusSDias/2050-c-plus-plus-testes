@@ -12,6 +12,9 @@
 		FF970AFA25BA6B5C00D304CE /* Usuario.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF970AF825BA6B5C00D304CE /* Usuario.cpp */; };
 		FF970AFE25BA6BF000D304CE /* Lance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF970AFC25BA6BF000D304CE /* Lance.cpp */; };
 		FF970B0225BA6C4900D304CE /* Leilao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF970B0025BA6C4900D304CE /* Leilao.cpp */; };
+		FFF4A2A025BCBC6B000DFD9C /* main-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFF4A29F25BCBC6B000DFD9C /* main-test.cpp */; };
+		FFF4A2A325BCBC9B000DFD9C /* teste-leilao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFF4A2A225BCBC9B000DFD9C /* teste-leilao.cpp */; };
+		FFF4A2A625BCBCC1000DFD9C /* teste-usuario.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFF4A2A525BCBCC1000DFD9C /* teste-usuario.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +41,9 @@
 		FF970AFD25BA6BF000D304CE /* Lance.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Lance.hpp; sourceTree = "<group>"; };
 		FF970B0025BA6C4900D304CE /* Leilao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Leilao.cpp; sourceTree = "<group>"; };
 		FF970B0125BA6C4900D304CE /* Leilao.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Leilao.hpp; sourceTree = "<group>"; };
+		FFF4A29F25BCBC6B000DFD9C /* main-test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "main-test.cpp"; sourceTree = "<group>"; };
+		FFF4A2A225BCBC9B000DFD9C /* teste-leilao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "teste-leilao.cpp"; sourceTree = "<group>"; };
+		FFF4A2A525BCBCC1000DFD9C /* teste-usuario.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "teste-usuario.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 			children = (
 				FF0BA9D025BC7F9B00288AD6 /* teste-avaliador.cpp */,
 				FF0BA9D725BC88A500288AD6 /* catch.hpp */,
+				FFF4A29F25BCBC6B000DFD9C /* main-test.cpp */,
+				FFF4A2A225BCBC9B000DFD9C /* teste-leilao.cpp */,
+				FFF4A2A525BCBCC1000DFD9C /* teste-usuario.cpp */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -156,8 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF4A2A325BCBC9B000DFD9C /* teste-leilao.cpp in Sources */,
+				FFF4A2A025BCBC6B000DFD9C /* main-test.cpp in Sources */,
 				FF970AFA25BA6B5C00D304CE /* Usuario.cpp in Sources */,
 				FF0BA9CC25BC7E0500288AD6 /* Avaliador.cpp in Sources */,
+				FFF4A2A625BCBCC1000DFD9C /* teste-usuario.cpp in Sources */,
 				FF0BA9D125BC7F9B00288AD6 /* teste-avaliador.cpp in Sources */,
 				FF970B0225BA6C4900D304CE /* Leilao.cpp in Sources */,
 				FF970AFE25BA6BF000D304CE /* Lance.cpp in Sources */,
