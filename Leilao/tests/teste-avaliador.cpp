@@ -1,7 +1,8 @@
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
+#include "Avaliador.hpp"
 
-/*int main() {
+TEST_CASE("Deve recuperar maior lance de leilão em ordem crescente") {
     // Arrange - Given
     Lance primeiroLance(Usuario("Vinicius Dias"), 1000);
     Lance segundoLance(Usuario("Ana Maria"), 2000);
@@ -15,13 +16,22 @@
     leiloeiro.avalia(leilao);
 
     // Assert - Then
-    float valorEsperado = 2000;
+    REQUIRE(2000 == leiloeiro.recuperaMaiorValor());
+}
 
-    if (valorEsperado == leiloeiro.recuperaMaiorValor()) {
-        std::cout << "TESTE OK" << std::endl;
-    } else {
-        std::cout << "TESTE FALHOU" << std::endl;
-    }
+TEST_CASE("Deve recuperar maior lance de leilão em ordem decrescente") {
+    // Arrange - Given
+    Lance primeiroLance(Usuario("Vinicius Dias"), 2000);
+    Lance segundoLance(Usuario("Ana Maria"), 1000);
+    Leilao leilao("Fiat 147 0Km");
+    leilao.recebeLance(primeiroLance);
+    leilao.recebeLance(segundoLance);
 
-    return 0;
-}*/
+    Avaliador leiloeiro;
+
+    // Act - When
+    leiloeiro.avalia(leilao);
+
+    // Assert - Then
+    REQUIRE(2000 == leiloeiro.recuperaMaiorValor());
+}
