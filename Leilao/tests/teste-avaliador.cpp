@@ -1,7 +1,7 @@
-#include "Avaliador.hpp"
-#include <iostream>
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 
-int main() {
+/*int main() {
     // Arrange - Given
     Lance primeiroLance(Usuario("Vinicius Dias"), 1000);
     Lance segundoLance(Usuario("Ana Maria"), 2000);
@@ -24,4 +24,4 @@ int main() {
     }
 
     return 0;
-}
+}*/

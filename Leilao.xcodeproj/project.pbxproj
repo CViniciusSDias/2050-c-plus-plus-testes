@@ -30,6 +30,7 @@
 		FF0BA9CA25BC7E0400288AD6 /* Avaliador.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Avaliador.cpp; sourceTree = "<group>"; };
 		FF0BA9CB25BC7E0500288AD6 /* Avaliador.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Avaliador.hpp; sourceTree = "<group>"; };
 		FF0BA9D025BC7F9B00288AD6 /* teste-avaliador.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "teste-avaliador.cpp"; sourceTree = "<group>"; };
+		FF0BA9D725BC88A500288AD6 /* catch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
 		FF970AEC25BA6B2400D304CE /* Leilao */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Leilao; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF970AF825BA6B5C00D304CE /* Usuario.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Usuario.cpp; sourceTree = "<group>"; };
 		FF970AF925BA6B5C00D304CE /* Usuario.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Usuario.hpp; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0BA9D025BC7F9B00288AD6 /* teste-avaliador.cpp */,
+				FF0BA9D725BC88A500288AD6 /* catch.hpp */,
 			);
 			path = tests;
 			sourceTree = "<group>";
