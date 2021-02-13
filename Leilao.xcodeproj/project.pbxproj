@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FF0BA9CC25BC7E0500288AD6 /* Avaliador.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF0BA9CA25BC7E0400288AD6 /* Avaliador.cpp */; };
-		FF0BA9D125BC7F9B00288AD6 /* teste-avaliador.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF0BA9D025BC7F9B00288AD6 /* teste-avaliador.cpp */; };
+		FF38644D25D8281E002E74AA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF38644C25D8281E002E74AA /* main.cpp */; };
 		FF970AFA25BA6B5C00D304CE /* Usuario.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF970AF825BA6B5C00D304CE /* Usuario.cpp */; };
 		FF970AFE25BA6BF000D304CE /* Lance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF970AFC25BA6BF000D304CE /* Lance.cpp */; };
 		FF970B0225BA6C4900D304CE /* Leilao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF970B0025BA6C4900D304CE /* Leilao.cpp */; };
-		FFF4A2A025BCBC6B000DFD9C /* main-test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFF4A29F25BCBC6B000DFD9C /* main-test.cpp */; };
-		FFF4A2A325BCBC9B000DFD9C /* teste-leilao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFF4A2A225BCBC9B000DFD9C /* teste-leilao.cpp */; };
-		FFF4A2A625BCBCC1000DFD9C /* teste-usuario.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFF4A2A525BCBCC1000DFD9C /* teste-usuario.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,8 +29,7 @@
 /* Begin PBXFileReference section */
 		FF0BA9CA25BC7E0400288AD6 /* Avaliador.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Avaliador.cpp; sourceTree = "<group>"; };
 		FF0BA9CB25BC7E0500288AD6 /* Avaliador.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Avaliador.hpp; sourceTree = "<group>"; };
-		FF0BA9D025BC7F9B00288AD6 /* teste-avaliador.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "teste-avaliador.cpp"; sourceTree = "<group>"; };
-		FF0BA9D725BC88A500288AD6 /* catch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
+		FF38644C25D8281E002E74AA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FF970AEC25BA6B2400D304CE /* Leilao */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Leilao; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF970AF825BA6B5C00D304CE /* Usuario.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Usuario.cpp; sourceTree = "<group>"; };
 		FF970AF925BA6B5C00D304CE /* Usuario.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Usuario.hpp; sourceTree = "<group>"; };
@@ -41,9 +37,6 @@
 		FF970AFD25BA6BF000D304CE /* Lance.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Lance.hpp; sourceTree = "<group>"; };
 		FF970B0025BA6C4900D304CE /* Leilao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Leilao.cpp; sourceTree = "<group>"; };
 		FF970B0125BA6C4900D304CE /* Leilao.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Leilao.hpp; sourceTree = "<group>"; };
-		FFF4A29F25BCBC6B000DFD9C /* main-test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "main-test.cpp"; sourceTree = "<group>"; };
-		FFF4A2A225BCBC9B000DFD9C /* teste-leilao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "teste-leilao.cpp"; sourceTree = "<group>"; };
-		FFF4A2A525BCBCC1000DFD9C /* teste-usuario.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "teste-usuario.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,18 +65,6 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		FF0BA9CF25BC7F8300288AD6 /* tests */ = {
-			isa = PBXGroup;
-			children = (
-				FF0BA9D025BC7F9B00288AD6 /* teste-avaliador.cpp */,
-				FF0BA9D725BC88A500288AD6 /* catch.hpp */,
-				FFF4A29F25BCBC6B000DFD9C /* main-test.cpp */,
-				FFF4A2A225BCBC9B000DFD9C /* teste-leilao.cpp */,
-				FFF4A2A525BCBCC1000DFD9C /* teste-usuario.cpp */,
-			);
-			path = tests;
-			sourceTree = "<group>";
-		};
 		FF970AE325BA6B2400D304CE = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +84,8 @@
 		FF970AEE25BA6B2400D304CE /* Leilao */ = {
 			isa = PBXGroup;
 			children = (
-				FF0BA9CF25BC7F8300288AD6 /* tests */,
 				FF0BA9CE25BC7F6E00288AD6 /* src */,
+				FF38644C25D8281E002E74AA /* main.cpp */,
 			);
 			path = Leilao;
 			sourceTree = "<group>";
@@ -165,13 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF4A2A325BCBC9B000DFD9C /* teste-leilao.cpp in Sources */,
-				FFF4A2A025BCBC6B000DFD9C /* main-test.cpp in Sources */,
 				FF970AFA25BA6B5C00D304CE /* Usuario.cpp in Sources */,
 				FF0BA9CC25BC7E0500288AD6 /* Avaliador.cpp in Sources */,
-				FFF4A2A625BCBCC1000DFD9C /* teste-usuario.cpp in Sources */,
-				FF0BA9D125BC7F9B00288AD6 /* teste-avaliador.cpp in Sources */,
 				FF970B0225BA6C4900D304CE /* Leilao.cpp in Sources */,
+				FF38644D25D8281E002E74AA /* main.cpp in Sources */,
 				FF970AFE25BA6BF000D304CE /* Lance.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
