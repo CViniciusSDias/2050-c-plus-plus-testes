@@ -3,11 +3,11 @@
 #include <memory>
 #include "Usuario.hpp"
 
-void* operator new(size_t bytes)
+/*void* operator new(size_t bytes)
 {
     std::cout << "Alocando " << bytes << " bytes" << std::endl;
     return malloc(bytes);
-}
+}*/
 
 void ExibeNome(std::string_view nome)
 {
@@ -19,7 +19,7 @@ void ExibeNomeUsuario(std::shared_ptr<Usuario> usuario)
     std::cout << usuario->recuperaNome() << std::endl;
 }
 
-int main() {
+int main2() {
     std::cout << "------------------" << std::endl;
     std::string casal = "Carlos Vinicius dos Santos Dias & Patricia Freitas Graça";
     
