@@ -5,7 +5,7 @@ void Avaliador::avalia(Leilao leilao)
 {
     std::vector<Lance> lances = leilao.recuperaLances();
 
-    for (Lance lance : lances) {
+    for (auto lance : lances) {
         if (lance.recuperaValor() > maiorValor) {
             maiorValor = lance.recuperaValor();
         }

@@ -19,6 +19,12 @@ void ExibeNomeUsuario(std::shared_ptr<Usuario> usuario)
     std::cout << usuario->recuperaNome() << std::endl;
 }
 
+int& RecuperaNumero()
+{
+    static int valor = 10;
+    return valor;
+}
+
 int main2() {
     std::cout << "------------------" << std::endl;
     std::string casal = "Carlos Vinicius dos Santos Dias & Patricia Freitas Graça";
@@ -33,6 +39,8 @@ int main2() {
     std::shared_ptr<Usuario> usuario = std::make_shared<Usuario>("Vinicius Dias");
     //Usuario* usuario = new Usuario("Vinicius Dias");
     ExibeNomeUsuario(usuario);
+    
+    RecuperaNumero() = 5;
 
     return 0;
 }
