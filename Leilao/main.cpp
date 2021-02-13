@@ -9,5 +9,7 @@ void* operator new(size_t bytes)
 
 int main() {
     std::cout << "------------------" << std::endl;
+    std::string meuNomeCompleto = "Carlos Vinicius dos Santos Dias";
+
     return 0;
 }
