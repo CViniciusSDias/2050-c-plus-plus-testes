@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <memory>
 #include "Usuario.hpp"
 
 void* operator new(size_t bytes)
@@ -13,6 +14,11 @@ void ExibeNome(std::string_view nome)
     std::cout << nome << std::endl;
 }
 
+void ExibeNomeUsuario(std::unique_ptr<Usuario>& usuario)
+{
+    std::cout << usuario->recuperaNome() << std::endl;
+}
+
 int main() {
     std::cout << "------------------" << std::endl;
     std::string casal = "Carlos Vinicius dos Santos Dias & Patricia Freitas Graça";
@@ -24,11 +30,9 @@ int main() {
     ExibeNome(nomeEsposa);
     ExibeNome("Um nome qualquer sem estar na heap");
     
-    Usuario* usuario = new Usuario("Vinicius Dias");
-    
-    std::cout << usuario->recuperaNome() << std::endl;
-
-    delete usuario;
+    std::unique_ptr<Usuario> usuario = std::make_unique<Usuario>(new Usuario("Vinicius Dias"));
+    //Usuario* usuario = new Usuario("Vinicius Dias");
+    ExibeNomeUsuario(usuario);
 
     return 0;
 }
