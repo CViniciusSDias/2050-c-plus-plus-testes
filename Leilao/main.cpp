@@ -3,11 +3,11 @@
 #include <memory>
 #include "Usuario.hpp"
 
-/*void* operator new(size_t bytes)
+void* operator new(size_t bytes)
 {
     std::cout << "Alocando " << bytes << " bytes" << std::endl;
     return malloc(bytes);
-}*/
+}
 
 void ExibeNome(std::string_view nome)
 {
@@ -42,5 +42,71 @@ int main2() {
     
     RecuperaNumero() = 5;
 
+    return 0;
+}
+
+class String
+{
+private:
+    char* data;
+    size_t size;
+public:
+    String(const char* string)
+    {
+        std::cout << "String criada" << std::endl;
+        size = strlen(string);
+        data = new char[size];
+        data[size] = 0;
+        memcpy(data, string, size);
+    }
+    
+    String(const String& outraString)
+    {
+        std::cout << "String copiada" << std::endl;
+        size = strlen(outraString.data);
+        data = new char[size];
+        memcpy(data, outraString.data, size);
+    }
+    
+    String(String&& outraString)
+    {
+        std::cout << "String movida" << std::endl;
+        size = outraString.size;
+        data = outraString.data;
+
+        outraString.size = 0;
+        outraString.data = nullptr;
+    }
+    
+    ~String()
+    {
+        delete data;
+    }
+};
+
+class User
+{
+private:
+    String nome;
+public:
+    User(const String& string) : nome(string)
+    {
+        std::cout << "Construtor" << std::endl;
+    }
+    
+    User(String&& string) : nome(std::move(string))
+    {
+        std::cout << "Construtor" << std::endl;
+    }
+};
+
+int main() {
+    User umUsuario = User(String("Vinicius"));
+    String umaString = String("vinicius");
+    String outraString = umaString;
+    
+    User* usuario = new User("Teste");
+    usuario = ::new User("Teste");
+    
     return 0;
 }
